@@ -1,21 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
-import img from '../images/space.jpg';
+import img from "../images/space.jpg";
 
 const StyledCharacter = styled.div`
   border: inset grey 5px;
   margin: 2% 2%;
   display: flex;
   justify-content: space-between;
-  
+
   .character {
-    color: white;
+    color: ${(pr) => pr.theme.primaryColor};
     margin-left: 2%;
+    font-family: ${(pr) => pr.theme.fontFamily};
+    /* font-family: 'Orbitron', sans-serif; */
   }
   .birth {
-    color: white;
+    color: ${(pr) => pr.theme.primaryColor};
     margin-right: 2%;
+    font-family: ${(pr)=>pr.theme.fontFamily}
   }
 `;
 
